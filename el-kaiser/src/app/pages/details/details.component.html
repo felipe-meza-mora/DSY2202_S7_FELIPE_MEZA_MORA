@@ -1,0 +1,23 @@
+<div class="container mt-5" *ngIf="product">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card">
+          <img class="card-img-top" src="{{ product.imageUrl }}" alt="{{ product.title }}">
+          <div class="card-body">
+            <h2 class="card-title">{{ product.title }}</h2>
+            <br>
+            <p class="card-text"><strong>Categoría:</strong> {{ product.category }}</p>
+            <p class="card-text"><strong>Descripción:</strong> {{ product.description }}</p>
+            <p class="card-text"><strong>Descripción 1:</strong> {{ product.description1 }}</p>
+            <p class="card-text"><strong>Instrucciones:</strong> {{ product.instrucciones }}</p>
+            <p class="card-text"><strong>Precio Normal:</strong> <span class="text-muted text-decoration-line-through">  {{ product.normalPrice | currency:'':'symbol':'1.0-0' }}</span></p>
+            <p class="card-text"><strong>Precio de Oferta:</strong> <span class="text-danger fw-bold">  {{ product.offerPrice | currency:'':'symbol':'1.0-0' }}</span></p>
+            <div class="button-container">
+                <button class="btn btn-dark">Comprar</button>
+                <a href="/products" class="btn btn-secondary">Volver</a>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

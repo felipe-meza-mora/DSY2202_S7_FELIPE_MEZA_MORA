@@ -1,0 +1,13 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="value1">Value 1:</label>
+  <input id="value1" formControlName="value1" type="text">
+  
+  <label for="value2">Value 2:</label>
+  <input id="value2" formControlName="value2" type="text">
+  
+  <button type="submit">Submit</button>
+</form>
+
+<div *ngIf="result !== null">
+  Result: {{ result }}
+</div>
